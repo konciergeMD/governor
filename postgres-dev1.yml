@@ -56,4 +56,4 @@ postgresql:
     work_mem: "2MB"
     maintenance_work_mem: "250MB"
     max_connections: "180"
-    session_preload_libraries: "pg_stat_statements"
+    shared_preload_libraries: "pg_stat_statements"
