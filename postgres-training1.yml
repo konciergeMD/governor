@@ -2,32 +2,32 @@ loop_wait: 5
 rt53:
   zone: accint.co
   region: us-east-1
-  stack: test3
+  stack: training1
   ttl: 5
 sns:
   region: us-east-1
-  arn: CiA6lEmKEacJQOexR9xqeCah/47vZTBfJarR6C+Zi0UZbRKwAQEBAgB4OpRJihGnCUDnsUfcangmof+O72UwXyWq0egvmYtFGW0AAACHMIGEBgkqhkiG9w0BBwagdzB1AgEAMHAGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM+18y+jVWW1qJfItRAgEQgEOU0pUeZaclZNlHeqh2MTZeDtZ8rNCE3zbY8Qo7bhjqnI6cZOueXNNQh4XXwByAKCAOcPtX4Li/gDnr5kNXiSwLLVea
+  arn: CiA6lEmKEacJQOexR9xqeCah/47vZTBfJarR6C+Zi0UZbRK0AQEBAgB4OpRJihGnCUDnsUfcangmof+O72UwXyWq0egvmYtFGW0AAACLMIGIBgkqhkiG9w0BBwagezB5AgEAMHQGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMB2tASIIwFuKnRBv4AgEQgEexNPSqmgYtBbr0aAPz0yQkKIif/mCBTOY9qI9SXOZbe5GNlePOkv8FPelKOwtaeZAcSgs7VCWBpQmpJKmYNgoE+meaTpC+6A==
 sqs:
   region: us-east-1
-  name: barman-test3-queue
+  name: barman-training1-queue
 kms:
   region: us-east-1
 etcd:
   scope: batman
   ttl: 120
   host: 127.0.0.1:4001
-  cluster: CiA6lEmKEacJQOexR9xqeCah/47vZTBfJarR6C+Zi0UZbRKnAQEBAgB4OpRJihGnCUDnsUfcangmof+O72UwXyWq0egvmYtFGW0AAAB+MHwGCSqGSIb3DQEHBqBvMG0CAQAwaAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAyXMOG5CxpzonGQrZkCARCAO0zgVgbeEy8sA3QMykWLu933l5pv+UOSTNc4n/wdx9QtwPTfh0/oyZZ895Jowg+aCTv+X24PjiWW94w4
+  cluster: CiA6lEmKEacJQOexR9xqeCah/47vZTBfJarR6C+Zi0UZbRKnAQEBAgB4OpRJihGnCUDnsUfcangmof+O72UwXyWq0egvmYtFGW0AAAB+MHwGCSqGSIb3DQEHBqBvMG0CAQAwaAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAxBvCWGRi1NrlS5lJUCARCAO/1E8z4d8HB+9JPzmvNH2dvPJgzkHlE7+F1cWuTW94xwXPU/OXgB+Uv+C2DD/0tuix3zdsl2Sv/Jj9T8
 postgresql:
   port: 5432
   data_dir: /pg_cluster/pgsql/9.4/data
-  barman: barmane01.test3.aimetgtest.local
+  barman: barmane01.training1.aimetgtest.local
   replication:
     username: replicator
-    password: CiA6lEmKEacJQOexR9xqeCah/47vZTBfJarR6C+Zi0UZbRKPAQEBAgB4OpRJihGnCUDnsUfcangmof+O72UwXyWq0egvmYtFGW0AAABmMGQGCSqGSIb3DQEHBqBXMFUCAQAwUAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAzZNqNzQaEovVReXPkCARCAIy8JQXmQwzU+QOJpvoEBOprGNYGF8cwvsJJo0a6gOe9MFnse
+    password: CiA6lEmKEacJQOexR9xqeCah/47vZTBfJarR6C+Zi0UZbRKPAQEBAgB4OpRJihGnCUDnsUfcangmof+O72UwXyWq0egvmYtFGW0AAABmMGQGCSqGSIb3DQEHBqBXMFUCAQAwUAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAz4t40im2aBwZbiXAUCARCAIyXiMx0NJNSq6CZMF/pK0T5XwKW7MjGP2BVAqNd8pzCl2CgH
     network: 10.0.0.0/16
   psql:
     username: postgres
-    password: CiA6lEmKEacJQOexR9xqeCah/47vZTBfJarR6C+Zi0UZbRKPAQEBAgB4OpRJihGnCUDnsUfcangmof+O72UwXyWq0egvmYtFGW0AAABmMGQGCSqGSIb3DQEHBqBXMFUCAQAwUAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAyKztvhXZNlk/cKgYcCARCAIxOt8gJvId8wVaJMW2+OEwWTLSED/jXoB4S+yFHBemGn82S7
+    password: CiA6lEmKEacJQOexR9xqeCah/47vZTBfJarR6C+Zi0UZbRKPAQEBAgB4OpRJihGnCUDnsUfcangmof+O72UwXyWq0egvmYtFGW0AAABmMGQGCSqGSIb3DQEHBqBXMFUCAQAwUAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAyfOcJT5KbsbK/FWW0CARCAI1Plfou96atoVd2AZDrU70IlCcx2icF3AcU77s3L+M/y0NAF
   #recovery_conf:
     #restore_command: cp ../wal_archive/%f %p
   parameters:
@@ -55,5 +55,4 @@ postgresql:
     shared_buffers: "1800MB"
     work_mem: "2MB"
     maintenance_work_mem: "250MB"
-    max_connections: "180"
-    shared_preload_libraries: "pg_stat_statements"
+    max_connections: "150"
